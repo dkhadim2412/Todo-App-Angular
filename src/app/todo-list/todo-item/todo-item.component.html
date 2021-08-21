@@ -1,0 +1,15 @@
+<li class="list-group-item">
+    <div class="row">
+        <div class="col-1">
+            <input type="checkbox" class="form-check-input float-start" [checked]="completed" (click)="onToggleCompletedTask()" />
+        </div>
+        <div class="col-10">
+            <h4 [ngClass]="{'text-success': completed, 'text-decoration-line-through': completed}">
+                {{title}}
+            </h4>
+        </div>
+        <div class="col-1">
+            <button class="btn btn-sm btn-danger float-end" (click)="onDeleteTask()">-</button>
+        </div>
+    </div>
+</li>

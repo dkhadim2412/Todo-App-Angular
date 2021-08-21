@@ -1,0 +1,17 @@
+<div class="container mt-2 shadow">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6 py-4">
+            <h4 class="py-2">Nouvelle tache</h4>
+            <hr>
+
+            <form class="py-3" [formGroup]="todoForm" (ngSubmit)="onSubmitForm()">
+                <div class="form-group mb-2">
+                    <label for="title">Titre</label>
+                    <input type="text" class="form-control" formControlName="title" />
+                </div>
+
+                <button class="btn btn-success" type="submit" [disabled]="todoForm.invalid">Envoyer</button>
+            </form>
+        </div>
+    </div>
+</div>

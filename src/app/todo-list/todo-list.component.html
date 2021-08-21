@@ -1,0 +1,22 @@
+<div class="container mt-2 shadow">
+    <div class="row py-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-center my-4">
+                <button class="btn btn-success" routerLink="/todo-list/new">Nouvelle Tache</button>
+            </div>
+
+            <ul class="list-group">
+                <app-todo-item *ngFor="let task of todos"
+                        [id]="task.id"
+                        [title]="task.title"
+                        [completed]="task.completed"></app-todo-item>
+            </ul>
+
+            <div class="btn-group my-4" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary" (click)="onGettingAll()">All</button>
+                <button type="button" class="btn btn-success" (click)="onGettingCompletedTask()">Completed</button>
+                <button type="button" class="btn btn-warning" (click)="onGettingUnCompletedTask()">Todo</button>
+            </div>
+        </div>
+    </div>
+</div>
